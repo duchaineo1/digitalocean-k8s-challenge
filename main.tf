@@ -17,8 +17,8 @@ resource "digitalocean_kubernetes_cluster" "do-kubernetes-challenge" {
 
   node_pool {
     name       = "worker-pool"
-    size       = "s-2vcpu-2gb"
-    node_count = 2
+    size       = "s-2vcpu-4gb"
+    node_count = 3
 
     taint {
       key    = "workloadKind"
