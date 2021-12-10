@@ -19,12 +19,6 @@ resource "digitalocean_kubernetes_cluster" "do-kubernetes-challenge" {
     name       = "worker-pool"
     size       = "s-2vcpu-4gb"
     node_count = 3
-
-    taint {
-      key    = "workloadKind"
-      value  = "database"
-      effect = "NoSchedule"
-    }
   }
 }
 
